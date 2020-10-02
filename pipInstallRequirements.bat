@@ -1,0 +1,1 @@
+pip install -r program_files\requirements.txt
