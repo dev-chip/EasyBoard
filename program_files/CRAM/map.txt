@@ -1,0 +1,372 @@
+
+Map of linked.h11 from link file cram.lkf - Fri Oct 02 18:55:29 2020
+
+
+                               --------
+                               Segments
+                               --------
+
+start 00000400 end 00002d34 length 10548 segment .text
+start 00002d34 end 00002d37 length     3 segment .data
+start 00002d37 end 00002e7a length   323 segment .const
+start 00002e7a end 00002e7a length     0 segment .bss
+start 00002e7a end 00002f09 length   143 segment .debug
+
+
+                               -------
+                               Modules
+                               -------
+
+C:\COSMIC\cx11\lib\crts.h11:
+start 00000400 end 00000416 length    22 section .text
+start 00002e7a end 00002e7a length     0 section .bss
+
+xxxx_01.o:
+start 00000416 end 00000483 length   109 section .text
+start 00002e7a end 00002f09 length   143 section .debug
+start 00002d37 end 00002d63 length    44 section .const
+
+(LIB\libd.h11)printf.o:
+start 00000483 end 0000049e length    27 section .text
+
+(LIB\libd.h11)cprint.o:
+start 0000049e end 00000b4b length  1709 section .text
+start 00002d63 end 00002d76 length    19 section .const
+
+(LIB\libd.h11)dtoe.o:
+start 00000b4b end 00000ced length   418 section .text
+
+(LIB\libd.h11)dtof.o:
+start 00000ced end 00000df6 length   265 section .text
+
+(LIB\libd.h11)dtog.o:
+start 00000df6 end 00000f0a length   276 section .text
+
+(LIB\libd.h11)cnorm.o:
+start 00000f0a end 0000109c length   402 section .text
+start 00002d76 end 00002d7e length     8 section .const
+
+(LIB\libd.h11)cfcon.o:
+start 00002d7e end 00002dd8 length    90 section .const
+
+(LIB\libd.h11)dtento.o:
+start 0000109c end 00001178 length   220 section .text
+
+(LIB\libd.h11)round.o:
+start 00001178 end 000011e5 length   109 section .text
+
+(LIB\libd.h11)cffun.o:
+start 000011e5 end 00001284 length   159 section .text
+
+(LIB\libd.h11)scanf.o:
+start 00001284 end 0000129f length    27 section .text
+
+(LIB\libd.h11)cscan.o:
+start 0000129f end 00001a78 length  2009 section .text
+start 00002d34 end 00002d37 length     3 section .data
+start 00002dd8 end 00002e4d length   117 section .const
+
+(LIB\libd.h11)btod.o:
+start 00001a78 end 00001e23 length   939 section .text
+start 00002e4d end 00002e55 length     8 section .const
+
+(LIB\libi.h11)itob.o:
+start 00001e23 end 00001f9a length   375 section .text
+start 00002e55 end 00002e7a length    37 section .const
+
+(LIB\libi.h11)idiv.o:
+start 00001f9a end 00001fac length    18 section .text
+
+(LIB\libi.h11)ildiv.o:
+start 00001fac end 00001fdf length    51 section .text
+
+(LIB\libi.h11)getchr.o:
+start 00001fdf end 00001ff9 length    26 section .text
+
+(LIB\libi.h11)isspac.o:
+start 00001ff9 end 0000200a length    17 section .text
+
+(LIB\libi.h11)memchr.o:
+start 0000200a end 00002023 length    25 section .text
+
+(LIB\libi.h11)putchr.o:
+start 00002023 end 0000203d length    26 section .text
+
+(LIB\libi.h11)strchr.o:
+start 0000203d end 00002051 length    20 section .text
+
+(LIB\libi.h11)strlen.o:
+start 00002051 end 00002061 length    16 section .text
+
+(LIB\libi.h11)toup.o:
+start 00002061 end 0000206d length    12 section .text
+
+(LIB\libm.h11)dadd.o:
+start 0000206d end 000022f1 length   644 section .text
+
+(LIB\libm.h11)dcmp.o:
+start 000022f1 end 0000232d length    60 section .text
+
+(LIB\libm.h11)ddiv.o:
+start 0000232d end 00002450 length   291 section .text
+
+(LIB\libm.h11)ldiv.o:
+start 00002450 end 000025a8 length   344 section .text
+
+(LIB\libm.h11)dmul.o:
+start 000025a8 end 00002873 length   715 section .text
+
+(LIB\libm.h11)dtod.o:
+start 00002873 end 0000288c length    25 section .text
+
+(LIB\libm.h11)dtof.o:
+start 0000288c end 000028f4 length   104 section .text
+
+(LIB\libm.h11)dtol.o:
+start 000028f4 end 000029b5 length   193 section .text
+
+(LIB\libm.h11)dtos.o:
+start 000029b5 end 000029d2 length    29 section .text
+
+(LIB\libm.h11)cent.o:
+start 000029d2 end 000029e5 length    19 section .text
+
+(LIB\libm.h11)fadd.o:
+start 000029e5 end 00002b13 length   302 section .text
+
+(LIB\libm.h11)ftod.o:
+start 00002b13 end 00002b6c length    89 section .text
+
+(LIB\libm.h11)ilsh.o:
+start 00002b6c end 00002b86 length    26 section .text
+
+(LIB\libm.h11)imul10.o:
+start 00002b86 end 00002b92 length    12 section .text
+
+(LIB\libm.h11)itod.o:
+start 00002b92 end 00002bdd length    75 section .text
+
+(LIB\libm.h11)itol.o:
+start 00002bdd end 00002be9 length    12 section .text
+
+(LIB\libm.h11)jctab.o:
+start 00002be9 end 00002bf5 length    12 section .text
+
+(LIB\libm.h11)jtab.o:
+start 00002bf5 end 00002c4b length    86 section .text
+
+(LIB\libm.h11)ckent.o:
+start 00002c4b end 00002c67 length    28 section .text
+
+(LIB\libm.h11)ladd.o:
+start 00002c67 end 00002c79 length    18 section .text
+
+(LIB\libm.h11)lmul.o:
+start 00002c79 end 00002cf5 length   124 section .text
+
+(LIB\libm.h11)lneg.o:
+start 00002cf5 end 00002d07 length    18 section .text
+
+(LIB\libm.h11)lrzmp.o:
+start 00002d07 end 00002d12 length    11 section .text
+
+(LIB\libm.h11)msp.o:
+start 00002d12 end 00002d27 length    21 section .text
+
+(LIB\libm.h11)ulcmp.o:
+start 00002d27 end 00002d34 length    13 section .text
+
+
+                             -----------
+                             Stack usage
+                             -----------
+
+xxxx_01.o:
+_main         >  314   (16)
+
+LIB\libd.h11:
+__btod           102   (48)
+__addexp          16   (16)
+__poly        >   20   (20)
+__unpack           2   (2)
+__norm           111   (57)
+L11__strnlen      10   (10)
+L31__cvtup        10   (8)
+L51__putbuf       18   (12)
+L7__gnum          27   (21)
+__print          245   (55)
+L51_gtc           19   (8)
+L53_goodflt       10   (10)
+L71_ungtc          6   (6)
+__scan           288   (186)
+__dtento          54   (24)
+__dtoe           162   (51)
+__dtof           161   (50)
+__dtog           190   (28)
+_printf          255   (10)
+__round           12   (12)
+_scanf           298   (10)
+
+LIB\libi.h11:
+_getchar          11   (5)
+__udiv             4   (4)
+__uldiv           14   (14)
+_isspace           2   (2)
+__itob            27   (23)
+__ltob            41   (27)
+_memchr            8   (8)
+_putchar           6   (6)
+_strchr            6   (6)
+_strlen            6   (6)
+_toupper           2   (2)
+
+Stack size: 314
+
+
+                               -------
+                               Symbols
+                               -------
+
+__addexp   000011e5   defined in (LIB\libd.h11)cffun.o section .text
+                      used in (LIB\libd.h11)btod.o
+__btod     00001a78   defined in (LIB\libd.h11)btod.o section .text
+                      used in (LIB\libd.h11)cscan.o
+__dtens    00002d7e   defined in (LIB\libd.h11)cfcon.o section .const
+                      used in (LIB\libd.h11)cnorm.o (LIB\libd.h11)dtento.o
+                              (LIB\libd.h11)btod.o
+__dtento   0000109c   defined in (LIB\libd.h11)dtento.o section .text
+                      used in (LIB\libd.h11)cnorm.o (LIB\libd.h11)btod.o
+__dtoe     00000b4b   defined in (LIB\libd.h11)dtoe.o section .text
+                      used in (LIB\libd.h11)cprint.o (LIB\libd.h11)dtog.o
+__dtof     00000ced   defined in (LIB\libd.h11)dtof.o section .text
+                      used in (LIB\libd.h11)cprint.o (LIB\libd.h11)dtog.o
+__dtog     00000df6   defined in (LIB\libd.h11)dtog.o section .text
+                      used in (LIB\libd.h11)cprint.o
+__huge     00002dce   defined in (LIB\libd.h11)cfcon.o section .const
+                      used in (LIB\libd.h11)dtento.o
+__itob     00001e23   defined in (LIB\libi.h11)itob.o section .text
+                      used in (LIB\libd.h11)cprint.o
+__ltob     00001ed1   defined in (LIB\libi.h11)itob.o section .text
+                      used in (LIB\libd.h11)cprint.o
+__memory   00002e7a   defined in command file section .bss
+                      used in C:\COSMIC\cx11\lib\crts.h11
+__norm     00000f0a   defined in (LIB\libd.h11)cnorm.o section .text
+                      used in (LIB\libd.h11)dtoe.o (LIB\libd.h11)dtof.o
+                              (LIB\libd.h11)dtog.o
+__ntens    00002dd6   defined in (LIB\libd.h11)cfcon.o section .const
+                      used in (LIB\libd.h11)dtento.o (LIB\libd.h11)btod.o
+__poly     00001230   defined in (LIB\libd.h11)cffun.o section .text
+                      *** not used ***
+__print    00000623   defined in (LIB\libd.h11)cprint.o section .text
+                      used in (LIB\libd.h11)printf.o
+__round    00001178   defined in (LIB\libd.h11)round.o section .text
+                      used in (LIB\libd.h11)dtoe.o (LIB\libd.h11)dtof.o
+__scan     000013fe   defined in (LIB\libd.h11)cscan.o section .text
+                      used in (LIB\libd.h11)scanf.o
+__stack    00007dfe   defined in command file
+                      used in C:\COSMIC\cx11\lib\crts.h11
+__stext    00000400   defined in C:\COSMIC\cx11\lib\crts.h11 section .text
+                      *** not used ***
+__udiv     00001f9a   defined in (LIB\libi.h11)idiv.o section .text
+                      used in (LIB\libd.h11)dtoe.o (LIB\libd.h11)cnorm.o
+                              (LIB\libi.h11)itob.o
+__uldiv    00001fac   defined in (LIB\libi.h11)ildiv.o section .text
+                      used in (LIB\libi.h11)itob.o
+__unpack   00001263   defined in (LIB\libd.h11)cffun.o section .text
+                      used in (LIB\libd.h11)cnorm.o (LIB\libd.h11)btod.o
+_exit      00000414   defined in C:\COSMIC\cx11\lib\crts.h11 section .text
+_getchar   00001fdf   defined in (LIB\libi.h11)getchr.o section .text
+                      used in (LIB\libd.h11)cscan.o
+_isspace   00001ff9   defined in (LIB\libi.h11)isspac.o section .text
+                      used in (LIB\libd.h11)cscan.o (LIB\libd.h11)btod.o
+_main      00000416   defined in xxxx_01.o section .text
+                      used in C:\COSMIC\cx11\lib\crts.h11
+_memchr    0000200a   defined in (LIB\libi.h11)memchr.o section .text
+                      used in (LIB\libd.h11)dtog.o (LIB\libd.h11)cscan.o
+_printf    00000483   defined in (LIB\libd.h11)printf.o section .text
+                      used in xxxx_01.o
+_putchar   00002023   defined in (LIB\libi.h11)putchr.o section .text
+                      used in (LIB\libd.h11)cprint.o (LIB\libi.h11)getchr.o
+_scanf     00001284   defined in (LIB\libd.h11)scanf.o section .text
+                      used in xxxx_01.o
+_strchr    0000203d   defined in (LIB\libi.h11)strchr.o section .text
+                      used in (LIB\libd.h11)cprint.o (LIB\libd.h11)cscan.o
+_strlen    00002051   defined in (LIB\libi.h11)strlen.o section .text
+                      used in (LIB\libd.h11)cprint.o
+_toupper   00002061   defined in (LIB\libi.h11)toup.o section .text
+                      used in (LIB\libd.h11)cprint.o
+c_dadd     0000206d   defined in (LIB\libm.h11)dadd.o section .text
+                      used in (LIB\libd.h11)cffun.o (LIB\libd.h11)btod.o
+c_dcmp     000022f1   defined in (LIB\libm.h11)dcmp.o section .text
+                      used in (LIB\libd.h11)cnorm.o (LIB\libd.h11)dtento.o
+c_ddiv     0000232d   defined in (LIB\libm.h11)ddiv.o section .text
+                      used in (LIB\libd.h11)dtento.o
+c_divl     00002488   defined in (LIB\libm.h11)ldiv.o section .text
+                      used in (LIB\libi.h11)ildiv.o
+c_dmul     000025a8   defined in (LIB\libm.h11)dmul.o section .text
+                      used in (LIB\libd.h11)cnorm.o (LIB\libd.h11)dtento.o
+                              (LIB\libd.h11)cffun.o (LIB\libd.h11)btod.o
+c_dsub     0000209d   defined in (LIB\libm.h11)dadd.o section .text
+                      used in (LIB\libd.h11)cnorm.o
+c_dtod     00002873   defined in (LIB\libm.h11)dtod.o section .text
+                      used in (LIB\libd.h11)dtoe.o (LIB\libd.h11)dtof.o
+                              (LIB\libd.h11)cnorm.o (LIB\libd.h11)dtento.o
+                              (LIB\libd.h11)cscan.o (LIB\libd.h11)btod.o
+c_dtof     0000288c   defined in (LIB\libm.h11)dtof.o section .text
+                      used in (LIB\libd.h11)cscan.o
+c_dtoi     000028f4   defined in (LIB\libm.h11)dtol.o section .text
+                      used in (LIB\libd.h11)cnorm.o
+c_dtol     000028f4   defined in (LIB\libm.h11)dtol.o section .text
+                      *** not used ***
+c_dtos     000029b5   defined in (LIB\libm.h11)dtos.o section .text
+                      used in (LIB\libd.h11)btod.o
+c_ents     000029d2   defined in (LIB\libm.h11)cent.o section .text
+                      used in xxxx_01.o (LIB\libd.h11)dtento.o
+c_fadd     000029e5   defined in (LIB\libm.h11)fadd.o section .text
+                      used in xxxx_01.o
+c_fsub     00002a06   defined in (LIB\libm.h11)fadd.o section .text
+                      *** not used ***
+c_ftod     00002b13   defined in (LIB\libm.h11)ftod.o section .text
+                      used in xxxx_01.o
+c_ilsh     00002b6c   defined in (LIB\libm.h11)ilsh.o section .text
+                      used in (LIB\libd.h11)btod.o
+c_imul10   00002b86   defined in (LIB\libm.h11)imul10.o section .text
+                      used in (LIB\libd.h11)cprint.o (LIB\libd.h11)cscan.o
+                              (LIB\libd.h11)btod.o
+c_itod     00002b92   defined in (LIB\libm.h11)itod.o section .text
+                      used in (LIB\libd.h11)cnorm.o (LIB\libd.h11)btod.o
+c_itol     00002bdd   defined in (LIB\libm.h11)itol.o section .text
+                      used in (LIB\libd.h11)cnorm.o (LIB\libd.h11)cscan.o
+c_jctab    00002be9   defined in (LIB\libm.h11)jctab.o section .text
+                      used in (LIB\libd.h11)cprint.o
+c_jtab     00002bf5   defined in (LIB\libm.h11)jtab.o section .text
+                      used in (LIB\libd.h11)cscan.o
+c_kenst    00002c4b   defined in (LIB\libm.h11)ckent.o section .text
+                      *** not used ***
+c_kents    00002c52   defined in (LIB\libm.h11)ckent.o section .text
+                      used in (LIB\libd.h11)cprint.o (LIB\libd.h11)dtoe.o
+                              (LIB\libd.h11)dtof.o (LIB\libd.h11)dtog.o
+                              (LIB\libd.h11)cnorm.o (LIB\libd.h11)cscan.o
+                              (LIB\libd.h11)btod.o (LIB\libi.h11)itob.o
+c_ladd     00002c67   defined in (LIB\libm.h11)ladd.o section .text
+                      used in (LIB\libd.h11)cscan.o
+c_ldiv     00002550   defined in (LIB\libm.h11)ldiv.o section .text
+                      used in (LIB\libd.h11)cnorm.o
+c_lmod     00002574   defined in (LIB\libm.h11)ldiv.o section .text
+                      *** not used ***
+c_lmul     00002c79   defined in (LIB\libm.h11)lmul.o section .text
+                      used in (LIB\libd.h11)cnorm.o (LIB\libd.h11)cscan.o
+c_lneg     00002cf5   defined in (LIB\libm.h11)lneg.o section .text
+                      used in (LIB\libd.h11)cscan.o (LIB\libi.h11)itob.o
+c_lrzmp    00002d07   defined in (LIB\libm.h11)lrzmp.o section .text
+                      used in (LIB\libd.h11)cscan.o
+c_ludv     00002450   defined in (LIB\libm.h11)ldiv.o section .text
+                      used in (LIB\libd.h11)cscan.o
+c_lumd     0000246f   defined in (LIB\libm.h11)ldiv.o section .text
+                      *** not used ***
+c_msps     00002d12   defined in (LIB\libm.h11)msp.o section .text
+                      used in xxxx_01.o (LIB\libd.h11)cprint.o
+                              (LIB\libd.h11)dtog.o (LIB\libd.h11)cnorm.o
+                              (LIB\libd.h11)btod.o
+c_ulcmp    00002d27   defined in (LIB\libm.h11)ulcmp.o section .text
+                      used in (LIB\libd.h11)cscan.o

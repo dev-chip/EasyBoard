@@ -1,0 +1,25 @@
+#	LINK COMMAND FILE FOR TEST PROGRAM
+#	Copyright (c) 1996 by COSMIC Software
+#
++seg .text -b 0x400 -n .text	# program start address
++seg .data -a .text -n .data
++seg .const -a .data -n .const
++seg .bss -a .const -n .bss
++seg .debug -a .bss -n .debug
+
+			# data start address
+# Put you startup file here
+"C:\COSMIC\cx11\lib\crts.h11"
+xxxx_01.o
+
+# Put your files here
+"LIB\libd.h11"
+"LIB\libi.h11"
+"LIB\libm.h11"
+
+
+# Put your interrupt vectors file here if needed
+#+seg .const -b 0xffce		# vectors start address
+
++def __memory=@.bss		# symbol used by library
++def __stack=0x7dfe		# stack pointer initial value afterwards is EEprom Config 0x7F

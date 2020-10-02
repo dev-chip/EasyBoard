@@ -1,0 +1,44 @@
+#	LINK COMMAND FILE FOR TEST PROGRAM
+#	Copyright (c) 1996 by COSMIC Software
+#
+
++seg .text -b 0x8000 -n .text	# program start address	
++seg .const -a .text -n .const
++seg .data -b 0x400 -n .data # data start address
++seg .bss -a .data -n .bss
++seg .debug -a .bss -n .debug		
+# Put you startup file here
+eprom.o
+xxxx_01.o
+
+# Put your files here
+"LIB\libd.h11"
+"LIB\libi.h11"
+"LIB\libm.h11"
+
+# Put your interrupt vectors file here if needed
++seg .text -b 0xffd6		# vectors start address
+vectors.o
++def __memory=@.bss		# symbol used by library
++def __stack=0x7dfe		# stack pointer initial value afterwards is EEprom Config 0x7F
++def __vector0=__stext		# symbol used by vector RESET
++def __vector1=__stext		# symbol used by vector Clock Fail
++def __vector2=__stext		# symbol used by vector COP Fail
++def __vector3=__stext		# symbol used by vector Illegal Opcode
++def __vector4=__stext		# symbol used by vector SWI
++def __vector5=__stext		# symbol used by vector XIRQ
++def __vector6=__stext		# symbol used by vector IRQ
++def __vector7=__stext		# symbol used by vector Real Time
++def __vector8=__stext		# symbol used by vector TIC1
++def __vector9=__stext		# symbol used by vector TIC2
++def __vector10=__stext		# symbol used by vector TIC3
++def __vector11=__stext		# symbol used by vector TOC1
++def __vector12=__stext		# symbol used by vector TOC2
++def __vector13=__stext		# symbol used by vector TOC3
++def __vector14=__stext		# symbol used by vector TOC4
++def __vector15=__stext		# symbol used by vector Timer TIC4/TOC5
++def __vector16=__stext		# symbol used by vector Timer Overflow
++def __vector17=__stext		# symbol used by vector Pulse Acc Overflow
++def __vector18=__stext		# symbol used by vector Pulse Acc input
++def __vector19=__stext		# symbol used by vector SPI Serial Transfer
++def __vector20=__stext		# symbol used by vector SCI Serial System

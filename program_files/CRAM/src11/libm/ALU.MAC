@@ -1,0 +1,60 @@
+;	MACROS AND DEFINES FOR ALU
+;	Copyright (c) 1993 by COSMIC (France)
+;
+CH:	equ	$40	; C register MSW
+CL:	equ	$42	; C register LSW
+ALUC:	equ	$44	; control register
+AREG:	equ	$45	; A register
+BREG:	equ	$47	; B register
+ALUF:	equ	$49	; status register
+ACF:	equ	$01	; operation complete flag
+DZF:	equ	$02	; division by zero flag
+OVF:	equ	$04	; overflow flag
+RZF:	equ	$40	; remainder zero flag
+NGF:	equ	$80	; negative flag
+TRG:	equ	$08	; trigger bit
+DCC:	equ	$10	; division compensation flag
+U_MUL:	equ	$00	; unsigned multiplication
+S_MUL:	equ	$80	; signed multiplication
+U_MAC:	equ	$20	; unsigned mult and add
+S_MAC:	equ	$A0	; signed mult and add
+U_IDIV:	equ	$40	; unsigned integer division
+S_IDIV:	equ	$C0	; signed integer division
+U_FDIV:	equ	$60	; unsigned fractionnal division
+S_FDIV:	equ	$E0	; signed fractionnal division
+;
+;	set alu control register
+;
+alu:	macro
+	ldab	#\1
+	stab	ALUC
+	endm
+;
+;	wait completion and clear ready bit
+;
+aluw:	macro
+\@wait:
+	brclr	ALUF,#ACF,\@wait
+	bclr	ALUF,#~ACF
+	endm
+;
+;	push D register
+;
+pshd:	macro
+	pshb
+	psha
+	endm
+;
+;	pop D register
+;
+puld:	macro
+	pula
+	pulb
+	endm
+;
+;	clear D register
+;
+clrd:	macro
+	clra
+	clrb
+	endm
