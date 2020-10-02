@@ -157,7 +157,7 @@ class MainWindow(Window):
         """
             Opens the user guide file using the default allocated application.
         """
-        file_path = os.path.abspath(os.path.join(THIS_PATH, "..", "docs", "EasyBoard User Guide.docx"))
+        file_path = os.path.abspath(os.path.join(THIS_PATH, "..", "docs", "EasyBoard User Guide.pdf"))
         if os.path.isfile(file_path):
             os.startfile('"{}"'.format(file_path))
             logger.info("Opening User Guide...")
