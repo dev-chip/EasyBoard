@@ -4,6 +4,7 @@
 
 import sys
 import os
+import shutil
 
 if sys.version_info[0] != 3:
     print("This script requires Python version 3.x")
@@ -21,6 +22,7 @@ from qtgui.cfg import get_configs
 from qtgui.logger import set_logger_level, init_console_logger
 
 logger = init_console_logger(name="gui")
+THIS_PATH = os.path.abspath(os.path.dirname(__file__))
 
 version_id = 1.0
 
@@ -33,11 +35,19 @@ def print_pretty_name():
            )
 
 
+def create_config():
+    shutil.copyfile(os.path.join(THIS_PATH, "qtgui", "default_configs.ini"), os.path.join(THIS_PATH, "qtgui", "configs.ini"))
+    return get_configs()
+
+
 if __name__ == '__main__':
     print_pretty_name()
 
     # set log level
-    config = get_configs()
+    try:
+        config = get_configs()
+    except:
+        config = create_config()
     set_logger_level(int(config["COMMON"]["log_level"]), name="gui")
 
     # start GUI
