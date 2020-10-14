@@ -219,11 +219,13 @@ class MainWindow(Window):
             return
 
         dst = os.path.abspath(os.path.join(CRAM_DIR_PATH, "prog1.s07"))
-        try:
-            shutil.copyfile(src, dst)
-        except IOError as e:
-            logger.error("Failed to process assembly code file selected '{}': error: {}".format(src, e))
-            return
+
+        if src != dst:  # prevents error (if file selected is in CRAM already)
+            try:
+                shutil.copyfile(src, dst)
+            except IOError as e:
+                logger.error("Failed to process assembly code file selected '{}': error: {}".format(src, e))
+                return
 
         # disable main frame
         logger.debug("Locked main frame.")
