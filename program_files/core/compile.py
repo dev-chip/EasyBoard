@@ -5,13 +5,13 @@ import io
 from tools.logger import init_console_logger
 
 THIS_PATH = os.path.abspath(os.path.dirname(__file__))
-CRAM_DIR_PATH = os.path.join(THIS_PATH, "..", "CRAM")
-COMPILE_BAT_PATH = os.path.join(THIS_PATH, "compile.bat")
+CRAM_DIR_PATH = os.path.abspath(os.path.join(THIS_PATH, "..", "CRAM"))
+COMPILE_BAT_PATH = os.path.abspath(os.path.join(THIS_PATH, "compile.bat"))
 
 
-def cram_compile(c_file_path, logger=init_console_logger(name="cram_compile")):
+def cosmic_compile(c_file_path, logger=init_console_logger(name="cosmic_compile")):
     """
-        Compiles using the cram compiler.
+        Compiles using the cosmic compiler.
     """
     assert(os.path.isfile(c_file_path))
     assert(".c" == c_file_path[-2:])
