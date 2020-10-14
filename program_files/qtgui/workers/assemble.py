@@ -1,27 +1,27 @@
 # -------------------------------------------------------------------------------
-#
+# A generic worker thread example
 # -------------------------------------------------------------------------------
 
 import threading
 
 from qtgui.workers.classes import CommunicateLog, CommunicateDone
 from qtgui.logger import init_signal_logger
-from core.compile import cosmic_compile
+from core.assemble import cosmic_assemble
 
 
-class CompileThread(threading.Thread):
+class AssembleThread(threading.Thread):
     """
         Automatically compiles a c file.
     """
 
-    def __init__(self, logger_callback, unlock_main_frame, c_file_path):
+    def __init__(self, logger_callback, unlock_main_frame, assembly_file_path):
         """
             init
         """
         threading.Thread.__init__(self)
 
         try:
-            self.c_file_path = c_file_path
+            self.assembly_file_path = assembly_file_path
 
             self.logCom = CommunicateLog()
             self.logCom.myGUI_signal.connect(logger_callback)
@@ -35,10 +35,10 @@ class CompileThread(threading.Thread):
 
     def run(self):
         """
-            Runs routine whilst communicating with GUI
+            Runs routine whilst commminicating with GUI
         """
         try:
-            cosmic_compile(self.c_file_path, logger=self.log)
+            cosmic_assemble(self.assembly_file_path, logger=self.log)
         except Exception as e:
             self.log.error("Error occurred in thread: '{}'".format(e))
         self.done.emit()

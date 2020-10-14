@@ -10,10 +10,10 @@ from qtgui.logger import init_signal_logger
 from core.hyperterminal import load_to_hyperterminal
 
 THIS_PATH = os.path.abspath(os.path.dirname(__file__))
-ASSEMBLY_CODE_PATH = os.path.abspath(os.path.join(THIS_PATH, "..", "..", "CRAM", "outs19.txt"))
+ASSEMBLED_CODE_PATH = os.path.abspath(os.path.join(THIS_PATH, "..", "..", "CRAM", "prog1.s19"))
 
 
-class LoadThread(threading.Thread):
+class LoadAssembledThread(threading.Thread):
     """
         Automatically loads a file through a HyperVisor window.
     """
@@ -37,7 +37,7 @@ class LoadThread(threading.Thread):
             Runs routine whilst communicating with GUI
         """
         try:
-            load_to_hyperterminal(ASSEMBLY_CODE_PATH, logger=self.log)
+            load_to_hyperterminal(ASSEMBLED_CODE_PATH, logger=self.log)
         except Exception as e:
             self.log.error("Error occurred in thread: '{}'".format(e))
         self.done.emit()

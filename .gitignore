@@ -15,3 +15,7 @@
 # generated compiler files
 /program_files/CRAM/map.txt
 /program_files/CRAM/outs19.txt
+/program_files/CRAM/assem.txt
+
+# config files
+/program_files/qtgui/configs.ini
