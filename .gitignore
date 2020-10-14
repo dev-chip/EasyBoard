@@ -6,3 +6,12 @@
 
 # other
 *__pycache__
+
+# generated assembly files
+*.s19
+*.s07
+*.lst
+
+# generated compiler files
+/program_files/CRAM/map.txt
+/program_files/CRAM/outs19.txt
