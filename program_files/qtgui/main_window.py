@@ -142,7 +142,7 @@ class MainWindow(Window):
         """
         file_path = str(self.ui.lineEdit_a_path.text())
         if os.path.isfile(file_path):
-            subprocess.run(['notepad', '{}'.format(file_path)])
+            subprocess.Popen(['notepad', '{}'.format(file_path)], shell=True)
             logger.info("Opening assembly file selected...")
         else:
             logger.error("Assembly file '{}' not found".format(file_path))
@@ -153,7 +153,7 @@ class MainWindow(Window):
         """
         file_path = os.path.abspath(os.path.join(CRAM_DIR_PATH, "outs19.txt"))
         if os.path.isfile(file_path):
-            subprocess.run(['notepad', '{}'.format(file_path)])
+            subprocess.Popen(['notepad', '{}'.format(file_path)], shell=True)
             logger.info("Opening Moterola S-record...")
         else:
             logger.error("Moterola S-record file '{}' not found".format(file_path))
@@ -164,7 +164,7 @@ class MainWindow(Window):
         """
         file_path = os.path.abspath(os.path.join(CRAM_DIR_PATH, "prog1.s19"))
         if os.path.isfile(file_path):
-            subprocess.run(['notepad', '{}'.format(file_path)])
+            subprocess.Popen(['notepad', '{}'.format(file_path)], shell=True)
             logger.info("Opening Moterola S-record...")
         else:
             logger.error("Moterola S-record file '{}' not found".format(file_path))
