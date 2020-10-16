@@ -15,7 +15,7 @@ class Ui_MainWindow(object):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(700, 383)
         MainWindow.setMinimumSize(QtCore.QSize(700, 0))
-        MainWindow.setMaximumSize(QtCore.QSize(900, 500))
+        MainWindow.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setMinimumSize(QtCore.QSize(500, 0))
         self.centralwidget.setMaximumSize(QtCore.QSize(16777215, 600))
