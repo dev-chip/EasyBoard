@@ -46,7 +46,7 @@ if __name__ == '__main__':
     # set log level
     try:
         config = get_configs()
-    except:
+    except IOError:
         config = create_config()
     set_logger_level(int(config["COMMON"]["log_level"]), name="gui")
 

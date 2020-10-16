@@ -17,15 +17,12 @@ def get_configs():
         Returns the data stored in the config file
         as a dictionary
     """
-    try:
-        config = configparser.ConfigParser()
-        file_path = os.path.join(CONFIGS_PATH, 'configs.ini')
-        if not os.path.isfile(file_path):
-            raise Exception("file '" + file_path + "' not found")
-        config.read(file_path)
-        return config
-    except Exception as e:
-        raise Exception("Failed reading configs: " + str(e))
+    config = configparser.ConfigParser()
+    file_path = os.path.join(CONFIGS_PATH, 'configs.ini')
+    if not os.path.isfile(file_path):
+        raise IOError("file '" + file_path + "' not found")
+    config.read(file_path)
+    return config
 
 
 def overwrite_config(config):
