@@ -19,7 +19,7 @@ def cosmic_assemble(a_file_path, logger=init_console_logger(name="cosmic_assembl
         raise Exception("File for assembly has wrong extension: {}".format(a_file_path))
 
     logger.info("Running assembler...")
-    command = r'"{}" {} {}'.format(ASSEMBLE_BAT_PATH, CRAM_DIR_PATH, a_file_path.replace(".s07", ""))
+    command = r'"{}" "{}" "{}"'.format(ASSEMBLE_BAT_PATH, CRAM_DIR_PATH, a_file_path.replace(".s07", ""))
     logger.debug("Executing command: {}".format(command))
     p = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
     std_reader = io.TextIOWrapper(p.stdout, encoding='utf8')
