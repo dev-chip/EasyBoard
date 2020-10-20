@@ -24,7 +24,7 @@ from qtgui.logger import set_logger_level, init_console_logger
 logger = init_console_logger(name="gui")
 THIS_PATH = os.path.abspath(os.path.dirname(__file__))
 
-version_id = 1.0
+version_id = 2.2
 
 
 def print_pretty_name():
