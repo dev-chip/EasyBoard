@@ -214,7 +214,7 @@ class MainWindow(Window):
             Assembles selected assembly file and generates assembly code (prog1.s19 file).
         """
         src = str(self.ui.lineEdit_a_path.text())
-        # check c file path is valid
+        # check .s07 file path is valid
         if not os.path.isfile(src):
             logger.error("Aborted assembly - invalid assembly file path: {}".format(src))
             return
@@ -223,19 +223,19 @@ class MainWindow(Window):
 
         if src != dst:  # prevents error (if file selected is in CRAM already)
             try:
+                logger.debug('copying file --> src: "{}" dst: "{}" ...'.format(src, dst))
                 shutil.copyfile(src, dst)
             except IOError as e:
                 logger.error("Failed to process assembly code file selected '{}': error: {}".format(src, e))
                 return
 
-        # disable main frame
-        logger.debug("Locked main frame.")
+        # disable buttons
         self.disable_buttons()
+        logger.debug("Disabled buttons")
         # start thread
         logger.debug("Starting thread...")
         self.t = AssembleThread(self.log_thread_callback, self.enable_buttons, dst)
         self.t.start()
-        logger.debug("Thread started")
 
     def load_c(self):
         # check outs19.txt exists

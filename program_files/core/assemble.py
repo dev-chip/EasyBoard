@@ -22,43 +22,23 @@ def cosmic_assemble(a_file_path, logger=init_console_logger(name="cosmic_assembl
     command = r'"{}" "{}" "{}"'.format(ASSEMBLE_BAT_PATH, CRAM_DIR_PATH, a_file_path.replace(".s07", ""))
     logger.debug("Executing command: {}".format(command))
     p = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
-    std_reader = io.TextIOWrapper(p.stdout, encoding='utf8')
-    err_reader = io.TextIOWrapper(p.stderr, encoding='utf8')
+    outs, errs = p.communicate()
+    outs = outs.decode("utf-8")
+    errs = errs.decode("utf-8")
 
-    error_occurred = False
+    if len(errs) == 0 and "****" not in outs:
+        for line in outs.split("\n"):
+            logger.info(line)
+        logger.info("Assembly successful")
+        return 0
 
-    while True:
-        # read outputs
-        s_out = std_reader.readline().rstrip()
-        e_out = err_reader.readline().rstrip()
-
-        # output std output text
-        if s_out != '':
-            while s_out != '':
-                if "****" in s_out:  # error output detected in std
-                    error_occurred = True
-                if error_occurred:  # sometimes errors are output through s_out
-                    logger.error(s_out)
-                else:
-                    logger.info(s_out)
-                s_out = std_reader.readline().rstrip()
-
-        # error occurred
-        elif e_out != '':
-            error_occurred = True
-            # output entire error then return 1
-            while e_out != '':
-                logger.error(e_out)
-                e_out = err_reader.readline().rstrip()
-
-        # process finished
-        elif p.poll() is not None:
-            if error_occurred:
-                logger.error("Assembly failed")
-                return 1
-            logger.info("Assembly successful")
-            return 0
+    for line in outs.split("\n"):
+        logger.error(line)
+    for line in errs.split("\n"):
+        logger.error(line)
+    logger.error("Assembly failed")
+    return 1
 
 
 if __name__ == "__main__":
-    exit(cram_compile(os.path.abspath(os.path.join(THIS_PATH, "..", "CRAM", "blank.c"))))
+    exit(cosmic_assemble(os.path.abspath(os.path.join(THIS_PATH, "..", "CRAM", "prog1.s07"))))
