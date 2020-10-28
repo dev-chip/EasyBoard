@@ -26,18 +26,16 @@ def cosmic_assemble(a_file_path, logger=init_console_logger(name="cosmic_assembl
     outs = outs.decode("utf-8")
     errs = errs.decode("utf-8")
 
-    if len(errs) == 0 and "****" not in outs:
-        for line in outs.split("\n"):
-            logger.info(line)
+    if len(errs) == 0 and "**** Error" not in outs:
+        logger.info(outs)
         logger.info("Assembly successful")
-        return 0
+    else:
+        lines = outs + "\n" + errs
+        logger.error(lines)
+        logger.error("Assembly failed")
 
-    for line in outs.split("\n"):
-        logger.error(line)
-    for line in errs.split("\n"):
-        logger.error(line)
-    logger.error("Assembly failed")
-    return 1
+    if "**** Warning" in outs or "**** Warning" in errs:
+        logger.warning("Code assembled with warnings")
 
 
 if __name__ == "__main__":
