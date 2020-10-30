@@ -287,6 +287,10 @@ class MainWindow(Window):
         if path == "":
             logger.info("Path selection cancelled")
             return
+        if ("%" in path or
+           "-" in path):
+            logger.error("Path selection failed: path cannot contain '-' or '%' characters (compiler does not like it)")
+            return
         logger.info("C file path selected: '{}'".format(path))
         self.ui.lineEdit_c_path.setText(path)
         self.config["PATHS"]["last_c_file"] = path
