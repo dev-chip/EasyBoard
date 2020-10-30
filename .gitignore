@@ -16,7 +16,7 @@
 /program_files/CRAM/map.txt
 /program_files/CRAM/outs19.txt
 /program_files/CRAM/assem.txt
-/program_files/CRAM/*.h
+*.h
 
 # config files
 /program_files/qtgui/configs.ini
