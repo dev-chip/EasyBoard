@@ -16,8 +16,9 @@ def cosmic_compile(c_file_path, logger=init_console_logger(name="cosmic_compile"
     assert(os.path.isfile(c_file_path))
     assert(".c" == c_file_path[-2:])
     logger.info("Compiling...")
-    logger.debug("Executing command: {}".format(r'"{}" {} {}'.format(COMPILE_BAT_PATH, CRAM_DIR_PATH, c_file_path)))
-    p = subprocess.Popen(r'"{}" {} {}'.format(COMPILE_BAT_PATH, CRAM_DIR_PATH, c_file_path), stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+    command = r'"{}" "{}" "{}"'.format(COMPILE_BAT_PATH, CRAM_DIR_PATH, c_file_path)
+    logger.debug("Executing command: {}".format(command))
+    p = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
     std_reader = io.TextIOWrapper(p.stdout, encoding='utf8')
     err_reader = io.TextIOWrapper(p.stderr, encoding='utf8')
 
