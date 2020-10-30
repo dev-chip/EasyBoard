@@ -44,7 +44,8 @@ def cosmic_compile(c_file_path, logger=init_console_logger(name="cosmic_compile"
             logger.info("Copying header file '{}' to '{}' ...".format(src, dst))
             shutil.copyfile(src, dst)
         except IOError as e:
-            logger.error("Header file '{}' was not found. Compilation failed. Error message: ".format(src, e))
+            logger.error("Header file '{}' was not found. Compilation failed. Error message: {}".format(h_filename, e))
+            logger.error("Compilation failed")
             return
 
     # compile
