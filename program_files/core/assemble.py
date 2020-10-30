@@ -36,6 +36,8 @@ def cosmic_assemble(a_file_path, logger=init_console_logger(name="cosmic_assembl
 
     if "**** Warning" in outs or "**** Warning" in errs:
         logger.warning("Code assembled with warnings")
+    if "**** Error" in outs or "**** Error" in errs:
+        logger.warning("Code assembled with errors")
 
 
 if __name__ == "__main__":
